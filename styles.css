@@ -13,8 +13,8 @@ body {
   --secondary-text-color: #5c5c62;
   --durability-text-color: #6a737d9c;
   --icon-color: #6a737d;
-  --border-color: #ff9a0045;
-  --text-decoration-color: #ff9a00;
+  --border-color: #49dcfa7c;
+  --text-decoration-color: #00b7ff;
 }
 
 .container {
@@ -123,12 +123,26 @@ body {
 }
 
 .contact-info__avatar {
+  position: relative;
   border-radius: 50%;
   width: 100px;
   height: 100px;
   object-fit: cover;
   border: 3px solid;
   border-color: var(--text-decoration-color);
+  background-image: url(assets/avatar.jpg);
+  background-position: center;
+  background-size: cover;
+  transition: transform 1500ms;
+}
+.contact-info__avatar:hover {
+  transform: rotate(360deg);
+}
+.contact-info__avatar:after {
+  content: 'Hover over me';
+  position: absolute;
+  left: 100px;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 /* Intro and skills styles */
@@ -262,4 +276,13 @@ body {
 
 .additional-info__languages-item {
   color: var(--secondary-text-color);
+}
+.interests__block {
+  color: var(--secondary-text-color);
+  padding-left: 20px;
+}
+.interests__header {
+  color: var(--secondary-text-color);
+  text-align: center;
+  margin-bottom: 15px;
 }
